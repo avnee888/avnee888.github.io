@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avnee Gaur — Portfolio</title>
+  <meta name="description" content="Portfolio of Avnee Gaur — Full-Stack Developer & Data Science Enthusiast">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-ring"></div>
+    <div class="preloader-text">AG</div>
+  </div>
+
+  <!-- Background canvases -->
+  <canvas id="starfield"></canvas>
+  <canvas id="trail"></canvas>
+
+  <!-- Nebula gradient overlays -->
+  <div class="nebula n1"></div>
+  <div class="nebula n2"></div>
+  <div class="nebula n3"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="logo">AG</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#achievements" class="nav-link">Achievements</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-sub reveal" data-delay="0">Hello, I'm</p>
+        <h1 class="hero-name reveal" data-delay="100">Avnee Gaur</h1>
+        <div class="hero-role reveal" data-delay="200">
+          <span class="typed"></span><span class="caret">|</span>
+        </div>
+        <p class="hero-desc reveal" data-delay="300">Crafting scalable backends, intelligent systems &amp; real-time applications — one commit at a time.</p>
+        <div class="hero-btns reveal" data-delay="400">
+          <a href="#projects" class="btn primary">Explore Work</a>
+          <a href="Resume.pdf" class="btn outline" download>Resume ↓</a>
+        </div>
+        <div class="hero-socials reveal" data-delay="500">
+          <a href="https://github.com/avnee888" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/avnee-gaur/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://leetcode.com/u/Avnee_gaur/" target="_blank" rel="noopener" aria-label="LeetCode" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
+          </a>
+          <a href="mailto:avneegaur2004@gmail.com" aria-label="Email" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hero-img reveal" data-delay="200">
+        <div class="img-glow"></div>
+        <div class="img-ring"></div>
+        <img src="Image.png" alt="Avnee Gaur" loading="eager">
+      </div>
+    </div>
+    <div class="scroll-cue">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <h2 class="section-title reveal">About Me</h2>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>I'm a Computer Science undergraduate at <strong>Pranveer Singh Institute of Technology</strong>, specializing in Data Science. I live at the crossroads of backend engineering and artificial intelligence — building systems that are fast, reliable, and smart.</p>
+        <p>From designing real-time emergency alert platforms to developing AI-driven crop recommendation engines, I love turning complex problems into clean, scalable solutions. When I'm not coding, you'll find me grinding LeetCode or exploring the latest in Generative &amp; Agentic AI.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card glass reveal">
+          <span class="stat-number" data-target="400">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">LeetCode Problems</span>
+        </div>
+        <div class="stat-card glass reveal">
+          <span class="stat-number" data-target="6">0</span>
+          <span class="stat-label">Certifications</span>
+        </div>
+        <div class="stat-card glass reveal">
+          <span class="stat-number" data-target="80">0</span><span class="stat-suffix">%</span>
+          <span class="stat-label">B.Tech Aggregate</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section">
+    <h2 class="section-title reveal">Skills &amp; Tech</h2>
+    <div class="skills-grid">
+      <div class="skill-card glass reveal">
+        <div class="skill-icon">⚡</div>
+        <h3>Languages</h3>
+        <div class="skill-tags">
+          <span class="tag">Java</span><span class="tag">Python</span><span class="tag">JavaScript</span>
+        </div>
+      </div>
+      <div class="skill-card glass reveal">
+        <div class="skill-icon">🔧</div>
+        <h3>Backend</h3>
+        <div class="skill-tags">
+          <span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">REST APIs</span>
+        </div>
+      </div>
+      <div class="skill-card glass reveal">
+        <div class="skill-icon">🎨</div>
+        <h3>Frontend</h3>
+        <div class="skill-tags">
+          <span class="tag">React.js</span><span class="tag">HTML</span><span class="tag">CSS</span>
+        </div>
+      </div>
+      <div class="skill-card glass reveal">
+        <div class="skill-icon">🗄️</div>
+        <h3>Databases</h3>
+        <div class="skill-tags">
+          <span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">Mongoose</span>
+        </div>
+      </div>
+      <div class="skill-card glass reveal">
+        <div class="skill-icon">🤖</div>
+        <h3>AI / ML</h3>
+        <div class="skill-tags">
+          <span class="tag">Scikit-learn</span><span class="tag">Pandas</span><span class="tag">NLP</span><span class="tag">Gen AI</span><span class="tag">Agentic AI</span>
+        </div>
+      </div>
+      <div class="skill-card glass reveal">
+        <div class="skill-icon">🧠</div>
+        <h3>Core CS</h3>
+        <div class="skill-tags">
+          <span class="tag">DSA</span><span class="tag">OOP</span><span class="tag">DBMS</span><span class="tag">OS</span><span class="tag">Git</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section">
+    <h2 class="section-title reveal">Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card glass reveal">
+        <div class="project-number">01</div>
+        <div class="project-body">
+          <h3>Raksha Signal</h3>
+          <p class="project-sub">Smart Emergency Alert &amp; Safety System</p>
+          <p class="project-desc">Real-time SOS system with live GPS tracking, event-driven communication via Socket.io, and Google Maps API integration to locate nearby hospitals and police stations instantly.</p>
+          <div class="project-tech">
+            <span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">MongoDB</span>
+            <span class="tag">Socket.io</span><span class="tag">Google Maps API</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="project-card glass reveal">
+        <div class="project-number">02</div>
+        <div class="project-body">
+          <h3>Krishi Help</h3>
+          <p class="project-sub">AI Crop Recommendation System</p>
+          <p class="project-desc">ML-powered crop recommendation engine using Scikit-learn &amp; Pandas with 85% prediction accuracy. Full REST API backend with Node.js and Express.js, backed by MongoDB.</p>
+          <div class="project-tech">
+            <span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Pandas</span>
+            <span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">MongoDB</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACHIEVEMENTS ===== -->
+  <section id="achievements" class="section">
+    <h2 class="section-title reveal">Achievements</h2>
+    <div class="achievements-grid">
+      <div class="achievement-card glass reveal">
+        <span class="ach-icon">🏆</span>
+        <div>
+          <h4>400+ LeetCode Problems</h4>
+          <p>Strong proficiency in Data Structures, Algorithms &amp; problem-solving.</p>
+        </div>
+      </div>
+      <div class="achievement-card glass reveal">
+        <span class="ach-icon">🥈</span>
+        <div>
+          <h4>2nd Place — Code &amp; Stack</h4>
+          <p>Organized by AlgoClub, PSIT.</p>
+        </div>
+      </div>
+      <div class="achievement-card glass reveal">
+        <span class="ach-icon">🥉</span>
+        <div>
+          <h4>3rd Place — Robotex (National)</h4>
+          <p>National-level robotics competition.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sub-title reveal">Certifications</h3>
+    <div class="cert-grid">
+      <div class="cert-badge glass reveal">
+        <span class="cert-icon">☁️</span> Google Cloud Gen AI — DevOps &amp; Automation
+      </div>
+      <div class="cert-badge glass reveal">
+        <span class="cert-icon">🔒</span> Google Cloud Gen AI — Security
+      </div>
+      <div class="cert-badge glass reveal">
+        <span class="cert-icon">🔮</span> Oracle Cloud AI Foundation Associate
+      </div>
+      <div class="cert-badge glass reveal">
+        <span class="cert-icon">☁️</span> AWS Cloud Practitioner Essentials
+      </div>
+      <div class="cert-badge glass reveal">
+        <span class="cert-icon">🤖</span> Oracle Cloud Agentic AI Foundations
+      </div>
+      <div class="cert-badge glass reveal">
+        <span class="cert-icon">🌐</span> HTML &amp; CSS — Infosys
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section">
+    <h2 class="section-title reveal">Get In Touch</h2>
+    <p class="contact-intro reveal">Have a project idea or want to collaborate? Let's connect.</p>
+    <div class="contact-links reveal">
+      <a href="mailto:avneegaur2004@gmail.com" class="contact-card glass">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <span class="contact-label">Email</span>
+        <span class="contact-value">avneegaur2004@gmail.com</span>
+      </a>
+      <a href="https://github.com/avnee888" target="_blank" class="contact-card glass">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        <span class="contact-label">GitHub</span>
+        <span class="contact-value">avnee888</span>
+      </a>
+      <a href="https://www.linkedin.com/in/avnee-gaur/" target="_blank" class="contact-card glass">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        <span class="contact-label">LinkedIn</span>
+        <span class="contact-value">avnee-gaur</span>
+      </a>
+      <a href="https://leetcode.com/u/Avnee_gaur/" target="_blank" class="contact-card glass">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
+        <span class="contact-label">LeetCode</span>
+        <span class="contact-value">Avnee_gaur</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Designed &amp; Built by <strong>Avnee Gaur</strong> · 2026</p>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="btt" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
